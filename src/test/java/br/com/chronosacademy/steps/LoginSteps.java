@@ -1,6 +1,7 @@
 package br.com.chronosacademy.steps;
 
 import br.com.chronosacademy.core.Driver;
+import br.com.chronosacademy.enums.Browser;
 import br.com.chronosacademy.pages.LoginPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -16,7 +17,7 @@ public class LoginSteps {
 
     @Before
     public void iniciaNavegador(){
-        new Driver("chrome");
+        new Driver(Browser.CHROME);
     }
 
     @After
@@ -37,7 +38,14 @@ public class LoginSteps {
     }
 
     @Entao("a janela modal deve ser fechada")
-    public void aJanelaModalDeveSerFechada() {
+    public void aJanelaModalDeveSerFechada() throws Exception {
+        try {
+            loginPage.invisibilityOfBtnFechar();
+        } catch (Exception e){
+            throw new Exception("A janela modal não foi fechada");
+        }
+
+
 
     }
 
