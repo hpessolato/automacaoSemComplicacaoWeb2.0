@@ -9,6 +9,7 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Map;
 
@@ -44,9 +45,6 @@ public class LoginSteps {
         } catch (Exception e){
             throw new Exception("A janela modal não foi fechada");
         }
-
-
-
     }
 
     @Quando("for realizado um clique icone de fechar da modal")
@@ -61,7 +59,6 @@ public class LoginSteps {
 
     @Entao("a pagina Create Account deve ser exibida")
     public void aPaginaCreateAccountDeveSerExibida() {
-        
     }
 
     @Quando("os campos de login forem preenchidos com os valores")

@@ -3,7 +3,6 @@ package br.com.chronosacademy.pages;
 import br.com.chronosacademy.core.Driver;
 import br.com.chronosacademy.maps.LoginMap;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage {
     LoginMap loginMap;
@@ -35,9 +34,7 @@ public class LoginPage {
         loginMap.inpPassword.sendKeys(password);
     }
 
-    public void clickInpRemember(){
-        loginMap.inpRemember.click();
-    }
+    public void clickInpRemember(){ loginMap.inpRemember.click(); }
 
     public void clickBtnSignIn(){
         loginMap.btnSignIn.click();
@@ -55,9 +52,7 @@ public class LoginPage {
         Driver.visibilityOf(loginMap.btnFechar);
     }
 
-    public void invisibilityOfBtnFechar(){
-        Driver.invisibilityOf(loginMap.btnFechar);
-    }
+    public void invisibilityOfBtnFechar(){ Driver.invisibilityOf(loginMap.btnFechar); }
 
 }
 

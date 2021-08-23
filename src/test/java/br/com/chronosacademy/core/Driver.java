@@ -53,4 +53,5 @@ public class Driver {
     public static void invisibilityOf(WebElement element){
         wait.until(ExpectedConditions.invisibilityOf(element));
     }
+
 }
