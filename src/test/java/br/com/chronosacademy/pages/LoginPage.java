@@ -3,6 +3,7 @@ package br.com.chronosacademy.pages;
 import br.com.chronosacademy.core.Driver;
 import br.com.chronosacademy.maps.LoginMap;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage {
     LoginMap loginMap;
@@ -19,6 +20,7 @@ public class LoginPage {
     }
 
     public void clickBtnFechar(){
+
         loginMap.btnFechar.click();
     }
 
@@ -26,12 +28,16 @@ public class LoginPage {
         loginMap.divFechaModal.click();
     }
 
-    public void setInpUserName(String username){
-        loginMap.inpUserName.sendKeys(username);
+    public void setInpUserName(String username) {
+        if (username != null) {
+            loginMap.inpUserName.sendKeys(username);
+        }
     }
 
-    public void setInpPassword(String password){
-        loginMap.inpPassword.sendKeys(password);
+    public void setInpPassword(String password) {
+        if (password != null) {
+            loginMap.inpPassword.sendKeys(password);
+        }
     }
 
     public void clickInpRemember(){ loginMap.inpRemember.click(); }
@@ -53,6 +59,11 @@ public class LoginPage {
     }
 
     public void invisibilityOfBtnFechar(){ Driver.invisibilityOf(loginMap.btnFechar); }
+
+    public void aguardaLoader(){
+        Driver.attributeChange(loginMap.divLoader, "display", "none");
+    }
+
 
 }
 
