@@ -22,7 +22,7 @@ public class TesteWeb {
     PrincipalPage principalPage;
     CursoPage cursoPage;
 
-    @Before
+    //@Before
     public void inicializaTeste(){
 
         driverWeb = new Driver(Browser.CHROME);
@@ -52,7 +52,7 @@ public class TesteWeb {
 
     }
 
-    @After
+    //@After
     public void finalizaTeste(){
         driver.quit();
 
