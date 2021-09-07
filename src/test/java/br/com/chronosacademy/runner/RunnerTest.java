@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/",
         tags = "@loginComSucesso",
         glue = "br.com.chronosacademy.steps",
-        plugin = {"json:/target/reports/CucumberReports.json", "pretty"},
+        plugin = {"json:target/reports/CucumberReports.json", "pretty"},
         snippets = CucumberOptions.SnippetType.CAMELCASE
 
 )
