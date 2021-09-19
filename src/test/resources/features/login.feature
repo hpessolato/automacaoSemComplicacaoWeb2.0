@@ -28,9 +28,9 @@
     Quando for realizado o clique no botao sign in
     Entao deve ser possivel logar no sistema
     Exemplos:
-      | identificacao          | usuario | senha | remember |
-      | com campos obrigatórios| chronos155 | Senha123 | false    |
-      | todos os campos        | chronos155 | Senha123 | true     |
+      | identificacao          | usuario    | senha       | remember |
+      | com campos obrigatórios| erro       | Senha123    | false    |
+      | todos os campos        | chronos155 | Senha123    | true     |
 
   @loginDadoInvalido
   Esquema do Cenario: Realizar login com <identificacao>
@@ -41,8 +41,8 @@
     Quando for realizado o clique no botao sign in
     Entao o sistema devera exibir uma mensagem de erro
     Exemplos:
-      | identificacao    | usuario  | senha    | remember |
-      | usuario inválido | invalido | Senha123    | false    |
+      | identificacao    | usuario     | senha    | remember |
+      | usuario inválido | invalido    | Senha123 | false    |
       | senha inválida   | chronos155  | invalida | false    |
   @dadosEmBranco
   Esquema do Cenario: Realizar login com <identificacao>
