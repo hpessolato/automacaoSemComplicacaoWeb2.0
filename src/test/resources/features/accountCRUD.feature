@@ -11,3 +11,20 @@
         |password| Senha123                 |
         |country | Brazil                   |
       Entao deve ser possivel logar no sistema apos o cadastro
+
+    @loginCRUD
+      Cenario: Realizar login crud
+      Dado que a modal esteja sendo exibida
+      Quando os campos de login forem preenchidos com os valores
+        | usuario  |  chronoshumberto  |
+        | senha    |  Senha123         |
+        | remember |  false            |
+      Quando for realizado o clique no botao sign in
+      Entao deve ser possivel logar no sistema
+
+    @alteracaoCRUD
+    Cenario: Realizar aleracao crud
+      Dado que esteja logado no sistema com
+        | usuario  |  chronoshumberto  |
+        | senha    |  Senha123         |
+        | remember |  false            |
