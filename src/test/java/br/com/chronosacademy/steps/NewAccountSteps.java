@@ -23,8 +23,8 @@ public class NewAccountSteps {
     @Quando("os campos de cadastro estiverem preenchidos com")
     public void osCamposDeCadastroEstiveremPreenchidosCom(Map<String, String> map) {
         username = map.get("username");
-        newAccountPage.setinpUserName(map.get("username"));
-        newAccountPage.setinpEmail(map.get("email"));
+        newAccountPage.setInpUserName(map.get("username"));
+        newAccountPage.setInpEmail(map.get("email"));
         newAccountPage.setInpPassword(map.get("password"));
         newAccountPage.setInpConfirmPassword(map.get("password"));
         newAccountPage.selectCountry(map.get("country"));

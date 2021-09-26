@@ -18,12 +18,12 @@ public class NewAccountPage {
         return newAccountMap.textCreateAccount.getText();
     }
 
-    public void setinpUserName(String userName){
+    public void setInpUserName(String userName){
         Driver.visibilityOf(newAccountMap.inpUserName);
         newAccountMap.inpUserName.sendKeys(userName);
     }
 
-    public void setinpEmail(String email){
+    public void setInpEmail(String email){
         newAccountMap.inpEmail.sendKeys(email);
     }
 
@@ -42,7 +42,7 @@ public class NewAccountPage {
     }
 
     public void clickInpIagree(){
-        newAccountMap.inpIAgree.click();
+        newAccountMap.inpIagree.click();
     }
 
     public void clickBtnRegister(){

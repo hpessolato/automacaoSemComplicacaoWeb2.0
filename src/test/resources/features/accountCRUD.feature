@@ -23,7 +23,7 @@
       Entao deve ser possivel logar no sistema
 
     @alteracaoCRUD
-    Cenario: Realizar aleracao crud
+    Cenario: Realizar alteracao crud
       Dado que esteja logado no sistema com
         | usuario  |  chronoshumberto  |
         | senha    |  Senha123         |

@@ -17,7 +17,7 @@ public class NewAccountMap {
     @FindBy (name = "countryListboxRegisterPage")
     public WebElement slcCountry;
     @FindBy (name = "i_agree")
-    public WebElement inpIAgree;
+    public WebElement inpIagree;
     @FindBy (css = "#register_btnundefined")
     public WebElement btnRegister;
 
