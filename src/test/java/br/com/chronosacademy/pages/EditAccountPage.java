@@ -10,7 +10,6 @@ public class EditAccountPage {
     public void EditAccountMap(){
         editAccountMap = new EditAccountMap();
         PageFactory.initElements(Driver.getDriver(), editAccountMap);
-        //
     }
 
     public void setInpFirstName(String firstName){
