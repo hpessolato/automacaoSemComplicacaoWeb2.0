@@ -1,5 +1,5 @@
 #language:pt
-
+@CRUD
   Funcionalidade: Account CRUD
 
     @cadastroCRUD
@@ -28,3 +28,20 @@
         | usuario  |  chronoshumberto  |
         | senha    |  Senha123         |
         | remember |  false            |
+      Dado que esteja na pagina de alteracao de conta
+      Quando altero os valores dos seguintes campos
+        | firstName  |  chronos   |
+        | lastName   |  humberto2 |
+      Quando for realizado o clique em salvar
+      Entao a alteracao foi exibida na pagina myAccount
+
+    @exclusaoCRUD
+    Cenario: Realizar exclusao crud
+      Dado que esteja logado no sistema com
+        | usuario  |  chronoshumberto  |
+        | senha    |  Senha123         |
+        | remember |  false            |
+      Dado que esteja na pagina myAccount
+      Quando for efetuado a acao do clique delete e em yes
+      Entao o usuario deve ser deletado
+

@@ -7,18 +7,18 @@ import org.openqa.selenium.support.PageFactory;
 public class MyAccountPage {
     MyAccountMap myAccountMap;
 
-    public MyAccountMap() {
+    public MyAccountPage() {
         myAccountMap = new MyAccountMap();
         PageFactory.initElements(Driver.getDriver(), myAccountMap);
     }
 
     public void clickLinkUSer() {
+        Driver.visibilityOf(myAccountMap.linkUser);
         myAccountMap.linkUser.click();
-
     }
 
-    public void clickMyAccount() {
-        Driver.visibilityOf(myAccountMap.linkUser);
+    public void clickLinkMyAccount() {
+        Driver.visibilityOf(myAccountMap.linkMyAccount);
         myAccountMap.linkMyAccount.click();
     }
 
@@ -29,7 +29,7 @@ public class MyAccountPage {
 
     public String getTextUsuario() {
         Driver.visibilityOf(myAccountMap.textUsuario);
-        myAccountMap.textUsuario.getText();
+        return myAccountMap.textUsuario.getText();
     }
 
     public void clickBtnDelete() {
@@ -42,4 +42,8 @@ public class MyAccountPage {
         myAccountMap.btnYes.click();
     }
 
+    public String getTextDelete() {
+        Driver.visibilityOf(myAccountMap.textDelete);
+        return myAccountMap.textDelete.getText();
+    }
 }

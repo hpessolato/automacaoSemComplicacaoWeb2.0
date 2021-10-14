@@ -109,7 +109,7 @@ public class Driver {
     }
 
     public static void aguardaOptions(Select select){
-        for (int i = 0; i < 6; i++){
+        for (int i = 0; i < 10; i++){
             if(select.getOptions().size() > 1){
                 return;
             }
